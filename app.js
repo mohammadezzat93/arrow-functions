@@ -219,10 +219,17 @@ Student.prototype.scopeArrow = () => console.log(this);
 // TODO: Uncomment the following line of code to see the output in the browser console
 console.log(joe.scopeArrow());
 
+// solution 4 :
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
 
+// ** s1. The value of this is therefore the same as the this of the enclosing scope **
+
 // 2. What is "this" when joe.scopeArrow() is invoked?
 
+// ** s2.  If there isn’t a non-arrow function scope surrounding, the this context will be, in the browser, the global window object.  **
+
 // 3. Explain why "this" is different when an arrow function is used.
-//
+
+//  ** s3. Arrow functions do not have their own this ,
+//  The call, apply and bind methods are NOT suitable for Arrow functions -- as they were designed to allow methods to execute within different    scopes -- because Arrow functions establish "this" based on the scope the Arrow function is defined within.**
